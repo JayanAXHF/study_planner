@@ -1,10 +1,10 @@
 pub mod cli;
+pub mod errors;
 pub mod structs;
 use color_eyre::eyre::Result;
 use std::fs::{self};
-use std::io::copy;
 use structs::*;
-use tracing::{debug, info};
+use tracing::info;
 
 impl NcertBooks {
     pub fn get_books(&self, subject: Subject, grade: Grade) -> Result<&[Book], BookError> {

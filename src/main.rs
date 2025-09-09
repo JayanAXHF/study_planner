@@ -9,10 +9,8 @@ use tracing_subscriber::Layer;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    color_eyre::install()?;
-    better_panic::install();
+    study_planner::errors::init()?;
     tracing_subscriber::fmt::init();
-
     let cli = cli::Cli::parse();
     match cli.command {
         cli::Commands::Download {
