@@ -1,0 +1,20 @@
+Gtk-Message: 14:18:39.863: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 14:18:39.863: Failed to load module "window-decorations-gtk-module"
+
+(zathura:34844): Gtk-WARNING **: 14:18:39.863: GtkSettings Cursor Theme: Unsupported GDK backend
+info: Opening plain database via sqlite backend.
+warning: sqlite database already exists. Set your database backend to sqlite. See zathurarc(5) for details.
+error: could not open document
+
+2025-09-09 14:18:41.680 zathura[34844:7958531] +[IMKClient subclass]: chose IMKClient_Modern
+2025-09-09 14:18:41.680 zathura[34844:7958531] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+Gtk-Message: 14:22:43.305: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 14:22:43.305: Failed to load module "window-decorations-gtk-module"
+
+(zathura:35117): Gtk-WARNING **: 14:22:43.305: GtkSettings Cursor Theme: Unsupported GDK backend
+info: Opening plain database via sqlite backend.
+warning: sqlite database already exists. Set your database backend to sqlite. See zathurarc(5) for details.
+error: could not open document
+
+2025-09-09 14:22:45.126 zathura[35117:7964867] +[IMKClient subclass]: chose IMKClient_Modern
+2025-09-09 14:22:45.126 zathura[35117:7964867] +[IMKInputSession subclass]: chose IMKInputSession_Modern

@@ -1,0 +1,223 @@
+# ncert_books.toml
+# NCERT Books organized by Grade, Subject, and Internal NCERT PDF Codes
+# Urdu books are excluded
+
+
+[grades.ninth]
+
+# English
+[[ninth.English.books]]
+title = "Beehive"
+pdf_code = "iebe1"
+
+[[ninth.English.books]]
+title = "Moments"
+pdf_code = "iemo1"
+
+[[ninth.English.books]]
+title = "Words and Expressions 1"
+pdf_code = "iewe1"
+
+# Hindi
+[[ninth.Hindi.books]]
+title = "Kshitij"
+pdf_code = "jhks1"
+
+[[ninth.Hindi.books]]
+title = "Sparsh"
+pdf_code = "jhsp1"
+
+[[ninth.Hindi.books]]
+title = "Sanchayan Bhag-1"
+pdf_code = "jhsy1"
+
+[[ninth.Hindi.books]]
+title = "Kritika"
+pdf_code = "jhkr1"
+
+# Mathematics
+[[ninth.Mathematics.books]]
+title = "Mathematics"
+pdf_code = "jema1"
+
+[[ninth.Mathematics.books]]
+title = "Ganit"
+pdf_code = "jhmt1"
+
+# Science
+[[ninth.Science.books]]
+title = "Science"
+pdf_code = "jesc1"
+
+[[ninth.Science.books]]
+title = "Vigyan"
+pdf_code = "jhsc1"
+
+# Social Science
+[[ninth.SocialScience.books]]
+title = "Contemporary India I"
+pdf_code = "jess1"
+
+[[ninth.SocialScience.books]]
+title = "Samkalin Bharat I"
+pdf_code = "jhss1"
+
+[[ninth.SocialScience.books]]
+title = "Democratic Politics I"
+pdf_code = "jess2"
+
+[[ninth.SocialScience.books]]
+title = "Loktantrik Rajniti I"
+pdf_code = "jhss2"
+
+[[ninth.SocialScience.books]]
+title = "India and the Contemporary World I"
+pdf_code = "jess3"
+
+[[ninth.SocialScience.books]]
+title = "Bharat Aur Samakalin Vishav I"
+pdf_code = "jhss3"
+
+[[ninth.SocialScience.books]]
+title = "Economics"
+pdf_code = "jess4"
+
+[[ninth.SocialScience.books]]
+title = "Arthashastra"
+pdf_code = "jhss4"
+
+# Sanskrit
+[[ninth.Sanskrit.books]]
+title = "Shemushi"
+pdf_code = "jhsk1"
+
+[[ninth.Sanskrit.books]]
+title = "Vyakaranavithi"
+pdf_code = "jhva1"
+
+[[ninth.Sanskrit.books]]
+title = "Abhyaswaan Bhav I"
+pdf_code = "jsab1"
+
+
+[grades.tenth]
+
+# Mathematics
+[[tenth.Mathematics.books]]
+title = "Mathematics"
+pdf_code = "jemh1"
+
+[[tenth.Mathematics.books]]
+title = "Ganit"
+pdf_code = "jhmh1"
+
+# Science
+[[tenth.Science.books]]
+title = "Science"
+pdf_code = "jesc1"
+
+[[tenth.Science.books]]
+title = "Vigyan"
+pdf_code = "jhsc1"
+
+# Hindi
+[[tenth.Hindi.books]]
+title = "Kshitij-2"
+pdf_code = "jhks1"
+
+[[tenth.Hindi.books]]
+title = "Sparsh"
+pdf_code = "jhsp1"
+
+[[tenth.Hindi.books]]
+title = "Sanchayan Bhag-2"
+pdf_code = "jhsy1"
+
+[[tenth.Hindi.books]]
+title = "Kritika"
+pdf_code = "jhkr1"
+
+# English
+[[tenth.English.books]]
+title = "First Flight"
+pdf_code = "jeff1"
+
+[[tenth.English.books]]
+title = "Footprints Without Feet (Supp. Reader)"
+pdf_code = "jefp1"
+
+[[tenth.English.books]]
+title = "Words and Expressions 2"
+pdf_code = "jewe2"
+
+# Social Science
+[[tenth.SocialScience.books]]
+title = "Contemporary India II"
+pdf_code = "jess1"
+
+[[tenth.SocialScience.books]]
+title = "Samkalin Bharat II"
+pdf_code = "jhss1"
+
+[[tenth.SocialScience.books]]
+title = "Aasri Hindustan-II"
+pdf_code = "juss1"
+
+[[tenth.SocialScience.books]]
+title = "Understanding Economic Development"
+pdf_code = "jess2"
+
+[[tenth.SocialScience.books]]
+title = "Arthik Vikas ki Samajh"
+pdf_code = "jhss2"
+
+[[tenth.SocialScience.books]]
+title = "Maashi Taraqqui Ki Samajh"
+pdf_code = "juss2"
+
+[[tenth.SocialScience.books]]
+title = "India and the Contemporary World II"
+pdf_code = "jess3"
+
+[[tenth.SocialScience.books]]
+title = "Bharat Aur Samakalin Vishav II"
+pdf_code = "jhss3"
+
+[[tenth.SocialScience.books]]
+title = "Hindustan Aur Asri Duniya"
+pdf_code = "juss3"
+
+[[tenth.SocialScience.books]]
+title = "Democratic Politics II"
+pdf_code = "jess4"
+
+[[tenth.SocialScience.books]]
+title = "Loktantrik Rajniti II"
+pdf_code = "jhss4"
+
+[[tenth.SocialScience.books]]
+title = "Jamhuri Siyasat II"
+pdf_code = "juss4"
+
+# Sanskrit
+[[tenth.Sanskrit.books]]
+title = "Shemushi"
+pdf_code = "jhsk1"
+
+[[tenth.Sanskrit.books]]
+title = "Vyakaranavithi"
+pdf_code = "jhva1"
+
+[[tenth.Sanskrit.books]]
+title = "Abhyaswaan Bhav II"
+pdf_code = "jsab1"
+
+# Environmental Education
+[[tenth.EnvironmentalEducation.books]]
+title = "Project Books"
+pdf_code = ""
+
+# Health and Physical Education
+[[tenth.HealthAndPhysicalEducation.books]]
+title = "Health and Physical Education"
+pdf_code = "jehp1"
