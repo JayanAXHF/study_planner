@@ -12,6 +12,8 @@ pub struct Cli {
     pub command: Commands,
     #[arg(short, long, global = true, default_value_t = false)]
     pub silent: bool,
+    #[arg(short, long, global = true, default_value_t = false)]
+    pub debug: bool,
 }
 
 #[derive(Subcommand)]
@@ -30,8 +32,18 @@ pub enum Commands {
         /// Path to save the books
         #[arg(short, long, value_name = "PATH", default_value_os_t = PathBuf::from("."))]
         path: PathBuf,
+        // Chapter number
         #[arg(short, long, value_name = "Chapter")]
         chapter: Option<u8>,
+    },
+    /// List all books
+    List {
+        /// Subject
+        #[arg(value_name = "SUBJECT")]
+        subject: Option<Subject>,
+        /// Grade
+        #[arg(value_name = "GRADE")]
+        grade: Option<Grade>,
     },
 }
 
