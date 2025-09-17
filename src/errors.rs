@@ -1,6 +1,11 @@
 use color_eyre::Result;
 use tracing::error;
 
+/// Initializes the error handling hooks for the application.
+///
+/// This function sets up `color_eyre` for pretty error reporting and `human-panic`
+/// for user-friendly panic messages in release builds. It also configures `better_panic`
+/// for more detailed panic stack traces in debug builds.
 pub fn init() -> Result<()> {
     let (panic_hook, eyre_hook) = color_eyre::config::HookBuilder::default()
         .panic_section(format!(

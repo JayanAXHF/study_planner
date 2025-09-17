@@ -5,17 +5,21 @@ use color_eyre::eyre::Result;
 
 use crate::{Grade, Subject};
 
+/// A CLI tool to download NCERT books.
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
 pub struct Cli {
     #[command(subcommand)]
     pub command: Commands,
+    /// Silence all output
     #[arg(short, long, global = true, default_value_t = false)]
     pub silent: bool,
+    /// Enable debug logging
     #[arg(short, long, global = true, default_value_t = false)]
     pub debug: bool,
 }
 
+/// Subcommands for the CLI.
 #[derive(Subcommand)]
 pub enum Commands {
     /// Download NCERT books
@@ -47,11 +51,14 @@ pub enum Commands {
     },
 }
 
+/// An extension trait for `Option` to prompt for user input if the value is `None`.
 pub trait OptionExt<T> {
+    /// Unwraps the `Option` or prompts the user for input.
     fn unwrap_or_user_input(self, prompt: &str) -> Result<T>;
 }
 
 impl<T: FromStr + Default> OptionExt<T> for Option<T> {
+    /// Unwraps the `Option` or prompts the user for input using the `inquire` crate.
     fn unwrap_or_user_input(self, prompt: &str) -> Result<T> {
         match self {
             Some(value) => Ok(value),

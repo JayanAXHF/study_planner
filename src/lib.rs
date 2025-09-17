@@ -10,6 +10,7 @@ use structs::*;
 use tracing::info;
 
 impl NcertBooks {
+    /// Retrieves a slice of books for a given subject and grade.
     pub fn get_books(&self, subject: Subject, grade: Grade) -> Result<&[Book], BookError> {
         let grade_map = match grade {
             9 => &self.ninth,
@@ -21,6 +22,8 @@ impl NcertBooks {
             .map(|sb| sb.books.as_slice())
             .ok_or(BookError::BookNotFound(subject, grade))
     }
+
+    /// Downloads a specific chapter of a book.
     pub async fn download_book<P>(&self, book: &Book, chapter: u8, path: P) -> Result<()>
     where
         P: AsRef<std::path::Path>,
@@ -49,7 +52,7 @@ impl NcertBooks {
         fs::write(&book_path, &bytes)?;
         Ok(())
     }
-    /// Load NCERT books from a TOML file
+    /// Load NCERT books from the embedded TOML file.
     pub fn load_books() -> Result<Self> {
         let data = include_str!("./bookcodes.toml");
         let parsed: NcertBooks = toml::from_str(data)?;
