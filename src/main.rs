@@ -2,7 +2,11 @@ use clap::Parser;
 use color_eyre::eyre::{self, Result};
 use colored::Colorize;
 use itertools::Itertools;
-use std::{io::Write, process::Stdio, sync::LazyLock};
+use std::{
+    io::{BufWriter, Write},
+    process::Stdio,
+    sync::LazyLock,
+};
 use study_planner::{
     cli::{self, OptionExt},
     structs::NcertBooks,
@@ -73,11 +77,9 @@ async fn main() -> Result<()> {
                 .args(rest)
                 .stdin(Stdio::piped())
                 .spawn()?;
-            let Some(stdin) = command.stdin.as_mut() else {
-                return Err(eyre::eyre!("Failed to get stdin"));
-            };
+            let mut stdin = BufWriter::new(command.stdin.take().unwrap());
+            let ncert = NcertBooks::load_books()?;
             if subject.is_none() && grade.is_none() {
-                let ncert = NcertBooks::load_books()?;
                 writeln!(stdin, "{}", "Ninth".bold())?;
                 for (subject, subject_books) in ncert.ninth {
                     writeln!(stdin, "\t{}", subject.to_string().cyan())?;
@@ -96,6 +98,7 @@ async fn main() -> Result<()> {
             } else {
                 todo!()
             }
+            stdin.flush()?;
             command.wait()?;
         }
         #[expect(unreachable_patterns)]
